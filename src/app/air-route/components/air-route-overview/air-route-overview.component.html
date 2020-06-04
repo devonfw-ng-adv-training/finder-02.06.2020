@@ -1,2 +1,4 @@
-<ar-air-route-search [criteria]="criteria"></ar-air-route-search>
-<ar-air-route-search-result></ar-air-route-search-result>
+<ar-air-route-search
+  [criteria]="criteria$ | async"
+  (criteriaChange)="updateUrlParamsWith($event)"></ar-air-route-search>
+<ar-air-route-search-result [value]="result$ | async"></ar-air-route-search-result>

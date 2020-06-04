@@ -7,4 +7,9 @@ export interface AirRouteSearchCriteria {
 
 export interface AirRoute {
   latestAcceptanceTimeOfRouting: string;
+  earliestTimeOfAvailabilityOfRouting: string;
+  firstSegmentOrigin: string;
+  firstSegmentDestination: string;
+  secondSegmentOrigin: string;
+  secondSegmentDestination: string;
 }

@@ -66,7 +66,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "air-routes:build"
+            "browserTarget": "air-routes:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {

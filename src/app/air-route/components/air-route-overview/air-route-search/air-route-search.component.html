@@ -1,1 +1,35 @@
-<p>{{criteria | json}}</p>
+<form [formGroup]="searchForm"
+      (ngSubmit)="notifyOnChange()"
+      (reset)="notifyOnChange()">
+  <div class="form-row">
+    <div class="col">
+      <ar-with-errors>
+        <input type="text" class="form-control" placeholder="Origin"
+               formControlName="origin">
+      </ar-with-errors>
+    </div>
+    <div class="col">
+      <ar-with-errors>
+        <input type="text" class="form-control" placeholder="Destination" formControlName="destination">
+      </ar-with-errors>
+    </div>
+    <div class="col">
+      <ar-with-errors>
+        <ar-product-code-input formControlName="productCode"></ar-product-code-input>
+      </ar-with-errors>
+    </div>
+    <div class="col">
+      <ar-with-errors>
+        <input type="text" class="form-control" placeholder="Start date" formControlName="fromDate">
+      </ar-with-errors>
+    </div>
+    <div class="col-1">
+      <button type="submit" class="btn btn-primary"
+              [disabled]="searchForm.invalid">Search</button>
+    </div>
+    <div class="col-1">
+      <button type="reset" class="btn btn-outline-secondary">Reset</button>
+    </div>
+  </div>
+</form>
+
